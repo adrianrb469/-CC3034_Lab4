@@ -1,0 +1,350 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.content > * {
+  margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.393) 0px 0px 9px;
+}
+
+.drawing {
+  background-color: #82d8ab;
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+
+.original {
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+
+.drawing::after {
+  position: absolute;
+  content: "CSS";
+  margin-top: 1em;
+  height: fit-content;
+  top: 100%;
+  color: rgb(39, 39, 39);
+  font-family: "Roboto Mono", monospace;
+}
+
+.original::after {
+  position: absolute;
+  content: "Reference";
+  top: 100%;
+  margin-top: 1em;
+  color: rgb(46, 46, 46);
+  left: 0;
+  font-family: "Roboto Mono", monospace;
+}
+
+.head {
+  width: 264px;
+  height: 197px;
+  border-radius: 50%;
+  background-color: #d68438;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.head::after {
+  content: "";
+  position: absolute;
+  width: 307px;
+  height: 190px;
+  border-radius: 50%;
+  background-color: #d68438;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cheek {
+  position: absolute;
+  width: 136px;
+  height: 225px;
+  border-radius: 50%;
+  background-color: #d68438;
+  z-index: 3;
+  top: 60%;
+}
+
+.c1 {
+  left: 79%;
+  transform: translate(-50%, -50%) rotate(-25deg);
+}
+
+.c2 {
+  left: 21%;
+  transform: translate(-50%, -50%) rotate(25deg);
+}
+
+.ear {
+  position: absolute;
+  width: 98px;
+  height: 67px;
+  top: 55px;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    to bottom,
+    #5f2f27 30px,
+    #d68438 25px,
+    #d68438 100px
+  );
+}
+
+.e1 {
+  left: 43px;
+  transform: rotate(-35deg);
+}
+
+.e1::before {
+  content: "";
+  width: 20px;
+  height: 50px;
+  top: 45%;
+  left: 7%;
+  position: absolute;
+  background-color: #d68438;
+  transform: rotate(-25deg);
+  border-radius: 36% 51% 0% 100% / 52% 0% 10% 98%;
+}
+
+.e1::after {
+  content: "";
+  width: 20px;
+  height: 50px;
+  top: 45%;
+  right: 7%;
+  position: absolute;
+  background-color: #d68438;
+  transform: rotate(220deg);
+  border-radius: 36% 51% 0% 100% / 52% 0% 10% 98%;
+}
+
+.e2 {
+  left: 263px;
+  transform: rotate(35deg);
+}
+
+.e2::after {
+  content: "";
+  width: 20px;
+  height: 50px;
+  top: 45%;
+  right: 7%;
+  position: absolute;
+  background-color: #d68438;
+  transform: rotate(220deg);
+  border-radius: 36% 51% 0% 100% / 52% 0% 10% 98%;
+}
+
+.e2::before {
+  content: "";
+  width: 20px;
+  height: 50px;
+  top: 45%;
+  left: 7%;
+  position: absolute;
+  background-color: #d68438;
+  transform: rotate(-25deg);
+  border-radius: 36% 51% 0% 100% / 52% 0% 10% 98%;
+}
+
+.ear_i {
+  position: absolute;
+  width: 68px;
+  height: 56.95px;
+  top: 65px;
+  left: 62px;
+  transform: rotate(-35deg);
+  border-radius: 50%;
+  background-color: #df686c;
+
+  background-image: radial-gradient(
+    circle at center 38.5px,
+    #df686c 35px,
+    #b54a4e 30px,
+    #c85457 50px
+  );
+  border-radius: 50% 48% 31% 34% / 36% 35% 65% 63%;
+}
+
+.ear_i2 {
+  position: absolute;
+  width: 68px;
+  height: 56.95px;
+  top: 65px;
+  left: 273px;
+  transform: rotate(35deg);
+  border-radius: 50%;
+  background-color: #df686c;
+
+  background-image: radial-gradient(
+    circle at center 38.5px,
+    #df686c 35px,
+    #b54a4e 30px,
+    #c85457 50px
+  );
+  border-radius: 50% 48% 31% 34% / 36% 35% 65% 63%;
+}
+
+.countour {
+  position: relative;
+  width: 260px;
+  height: 140px;
+  background-color: rgba(255, 0, 0, 0);
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ellipse1 {
+  position: absolute;
+  width: 100px;
+  height: 150px;
+  left: 58%;
+  border-radius: 50%;
+  top: -3.9%;
+  transform: rotate(-30deg);
+  background-color: #4c2a21;
+}
+
+.ellipse2 {
+  position: absolute;
+  width: 100px;
+  height: 150px;
+  left: 4%;
+  border-radius: 50%;
+  top: -3.9%;
+  transform: rotate(30deg);
+  background-color: #4c2a21;
+}
+
+.ellipse3 {
+  position: absolute;
+  width: 110px;
+  height: 190px;
+  left: 29%;
+  border-radius: 50%;
+  top: -40%;
+  transform: rotate(90deg);
+  background-color: #4c2a21;
+}
+
+.ellipse4 {
+  position: absolute;
+  width: 110px;
+  height: 190px;
+  left: 29%;
+  border-radius: 50%;
+  top: -20%;
+  transform: rotate(90deg);
+  background-color: #4c2a21;
+}
+
+.ellipse5 {
+  position: absolute;
+  width: 65px;
+  height: 110px;
+  left: 37.7%;
+  border-radius: 50%;
+  top: 58%;
+  transform: rotate(90deg);
+  background-color: #d68438;
+}
+
+.eyes {
+  position: absolute;
+  width: 120px;
+  height: 90px;
+  display: flex;
+  margin-left: 150px;
+}
+
+.left {
+  width: 120px;
+  height: 85px;
+  transform: translate(-90%, 17%);
+  background-image: linear-gradient(
+      -25deg,
+      rgba(255, 255, 255, 0) 55%,
+      #d68438 56%,
+      #d68438 100%
+    ),
+    radial-gradient(#47499c 38%, white 40%, white);
+  border-radius: 49%;
+}
+.eyes:hover .left, .eyes:hover .right{
+  background-image: radial-gradient(#47499c 38%, white 40%, white);
+
+
+}
+
+.right {
+  width: 120px;
+  height: 85px;
+  transform: translate(60%, 17%);
+  background-image: linear-gradient(
+      25deg,
+      rgba(255, 255, 255, 0) 55%,
+      #d68438 56%,
+      #d68438 100%
+    ),
+    radial-gradient(#47499c 38%, white 40%, white);
+  border-radius: 50%;
+}
+
+
+.mouth {
+  position: absolute;
+  top: 240px;
+  left: 170px;
+  width: 60px;
+  height: 60px;
+  border-radius: 200px 0px 200px 200px;
+  transform: scale(1.2, 0.9) rotate(-45deg);
+  background-color: #4c2a21;
+}
+
+.mouth2 {
+  position: absolute;
+  top: 243px;
+  left: 170px;
+  width: 60px;
+  height: 60px;
+  border-radius: 200px 0px 200px 200px;
+  transform: scale(1.4, 0.98) rotate(-45deg);
+  background-color: #88472b;
+}
+
+.mouth3 {
+  position: absolute;
+  top: 245px;
+  left: 170px;
+  width: 60px;
+  height: 60px;
+  border-radius: 200px 0px 200px 200px;
+  transform: scale(1.65, 1.1) rotate(-45deg);
+  background-color: #bb6231;
+}
